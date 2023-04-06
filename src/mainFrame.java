@@ -1,3 +1,5 @@
+import java.text.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Dan
@@ -148,10 +150,19 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void buttonHitungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHitungActionPerformed
         // TODO add your handling code here:
+        // Mengambil input text dari JTextField txtHarga
+        float jumlah = Float.parseFloat(txtHarga.getText());
+        // parsing(konversi) JTextField txtQty ke float
+        Float.parseFloat(txtQty.getText());
+        txtTotal.setText(Float.toString(jumlah));
+        DecimalFormat angka = new DecimalFormat("###,###");
+        labelTotal.setText("Total : Rp. "+angka.format(jumlah));
     }//GEN-LAST:event_buttonHitungActionPerformed
 
     private void buttonKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKeluarActionPerformed
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(this, "Terima Kasih telah membeli "+txtNama.getText());
+        System.exit(0);
     }//GEN-LAST:event_buttonKeluarActionPerformed
 
     private void txtNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaActionPerformed
