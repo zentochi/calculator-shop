@@ -36,7 +36,7 @@ public class mainFrame extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         // Show mainFrame
-        new mainFrame().setVisible(true);
+        //new mainFrame().setVisible(true);
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
